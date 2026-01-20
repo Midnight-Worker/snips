@@ -1,0 +1,17 @@
+Windows Registry Editor Version 5.00
+
+; Kontextmenü: MSYS2 MinGW64 here
+[HKEY_CLASSES_ROOT\Directory\Background\shell\MSYS2_MinGW64]
+@="MSYS2 MinGW64 here"
+"Icon"="C:\\msys64\\mingw64.exe"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\MSYS2_MinGW64\command]
+@="C:\\msys64\\msys2_shell.cmd -here -use-full-path -defterm -no-start -mingw64"
+
+; Kontextmenü: MSYS2 MinGW64 here (bei Ordner-Rechtsklick)
+[HKEY_CLASSES_ROOT\Directory\shell\MSYS2_MinGW64]
+@="MSYS2 MinGW64 here"
+"Icon"="C:\\msys64\\mingw64.exe"
+
+[HKEY_CLASSES_ROOT\Directory\shell\MSYS2_MinGW64\command]
+@="C:\\msys64\\msys2_shell.cmd -here -use-full-path -defterm -no-start -mingw64"

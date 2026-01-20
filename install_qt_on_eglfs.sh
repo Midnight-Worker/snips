@@ -1,0 +1,1 @@
+sudo apt install -y   qml-qt6 libqt6opengl6   qml6-module-qtqml qml6-module-qtquick qml6-module-qtquick-window   qml6-module-qtqml-workerscript   qml6-module-qtquick-controls qml6-module-qtquick-templates
