@@ -1,0 +1,23 @@
+sudo apt install bash-completion
+
+sudo nano ~/.bashrc
+
+# Farbe im Prompt
+PS1='\[\e[1;32m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ '
+
+# LS mit Farben
+alias ls='ls --color=auto'
+
+# Grep Farben
+alias grep='grep --color=auto'sudo apt install bash-completion
+
+sudo nano ~/.bashrc
+
+# Farbe im Prompt
+PS1='\[\e[1;32m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ '
+
+# LS mit Farben
+alias ls='ls --color=auto'
+
+# Grep Farben
+alias grep='grep --color=auto'
