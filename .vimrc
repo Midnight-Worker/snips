@@ -28,11 +28,8 @@ nmap <C-x> <Esc>:x<CR>
 :set cindent
 :set number
 
-"nnoremap <C-s> <Esc>:w<CR>
 "nnoremap <F8> <Esc>
 inoremap jk <Esc>
-inoremap jk <Esc>
-inoremap <C-s> <Esc>:w<CR>
 nnoremap .. :
 "nnoremap 77 /
 "nnoremap ++ ~
@@ -40,9 +37,12 @@ nnoremap .. :
 "nnoremap 22 "
 "nnoremap 11 !
 
-nmap <C-s> <Plug>MarkdownPreview
-nmap <M-s> <Plug>MarkdownPreviewStop
-nmap <C-p> <Plug>MarkdownPreviewToggle
+" Markdown Preview
+let g:mkdp_port = '3000'
+let g:mkdp_echo_preview_url = 1
+
+nnoremap <silent> <C-p> :MarkdownPreviewToggle<CR>
+nnoremap <silent> <M-p> :MarkdownPreviewStop<CR>
 
 let mapleader = " "
 
