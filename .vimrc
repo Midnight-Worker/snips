@@ -34,25 +34,11 @@ inoremap jk <Esc>
 inoremap jk <Esc>
 inoremap <C-s> <Esc>:w<CR>
 nnoremap .. :
-nnoremap 77 /
-nnoremap ++ ~
-nnoremap ßß \
-nnoremap 22 "
-nnoremap 11 !
-inoremap .. :
-inoremap 77 /
-inoremap ++ ~
-inoremap ßß \
-inoremap 22 "
-inoremap 11 !
-nnoremap .. :
-
-cnoremap .. :
-cnoremap 77 /
-cnoremap ++ ~
-cnoremap ßß \
-cnoremap 22 "
-cnoremap 11 !
+"nnoremap 77 /
+"nnoremap ++ ~
+"nnoremap ßß \
+"nnoremap 22 "
+"nnoremap 11 !
 
 nmap <C-s> <Plug>MarkdownPreview
 nmap <M-s> <Plug>MarkdownPreviewStop
@@ -68,9 +54,16 @@ let g:vimwiki_list = [{
 let g:vimwiki_list[0].diary_rel_path = '10\ Journal/Daily/'
 nnoremap <leader>ts i<C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR><Esc>
 vnoremap <C-y> :w !xclip -selection clipboard<CR>
-nnoremap <F5> :!python main.py<CR>
+nnoremap <F5> :!python "%"<CR>
 nnoremap <F6> :!qml main.qml<CR>
 nnoremap <F7> :!node main.js<CR>
 :colorscheme desert
 
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
+:belowright 12new | terminal ++curwin
+autocmd VimEnter * NERDTreeToggle | wincmd p
+nnoremap <leader>t :belowright 12new \| terminal ++curwin
