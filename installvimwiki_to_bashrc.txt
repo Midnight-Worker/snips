@@ -1,0 +1,16 @@
+getwiki() {
+        rsync -avp /c/users/maikt/desktop/Midnight-Walker/vimwiki/ ~/.vimwiki
+}
+pushwiki() {
+        rsync -avp ~/.vimwiki/ /c/users/maikt/Desktop/Midnight-Walker/vimwiki
+}
+
+export NB_BROWSER="msedge-nb"
+export NB_GUI_BROWSER="msedge-nb"
+nbwiki() {
+    (
+        cd ~/.vimwiki || exit
+        nb "$@"
+    )
+}
+alias nw="nbwiki"
