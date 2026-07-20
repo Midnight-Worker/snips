@@ -64,6 +64,6 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-:belowright 12new | terminal ++curwin
+":belowright 12new | terminal ++curwin
 autocmd VimEnter * NERDTreeToggle | wincmd p
-nnoremap <leader>t :belowright 12new \| terminal ++curwin
+nnoremap <leader>t :belowright 12new \| terminal ++curwin<CR>
