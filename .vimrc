@@ -67,3 +67,5 @@ nnoremap <C-l> <C-w>l
 ":belowright 12new | terminal ++curwin
 autocmd VimEnter * NERDTreeToggle | wincmd p
 nnoremap <leader>t :belowright 12new \| terminal ++curwin<CR>
+imap <S-Tab> <Plug>(emmet-expand-abbr)
+inoremap <leader>pic <img src="https://picsum.photos/id/" alt=""><Left><Left><Left><Left><Left><Left><Left><Left><Left>
