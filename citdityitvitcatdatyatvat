@@ -1,0 +1,9 @@
+cit	change inner tag
+cit	delete inner
+yit	yank inner
+vit	visual inner
+
+cat 	change around tag
+dat	delete around
+yat	yank around
+vat	visual around
