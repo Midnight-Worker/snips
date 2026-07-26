@@ -1,3 +1,6 @@
+#ph 800x600 output.png meintext yellow red
+#ph maße filename text hintergrund vordergrund
+
 ph() {
     local size="$1"
     local filename="$2"
