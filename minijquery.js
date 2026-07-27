@@ -1,27 +1,5 @@
-const $ = selector => {
-    const element = document.querySelector(selector);
+mkdir -p js
 
-    return {
-        element,
-
-        text(value) {
-            element.textContent = value;
-            return this;
-        },
-
-        html(value) {
-            element.innerHTML = value;
-            return this;
-        },
-
-        css(property, value) {
-            element.style[property] = value;
-            return this;
-        },
-
-        on(event, callback) {
-            element.addEventListener(event, callback);
-            return this;
-        }
-    };
-};
+curl -L \
+  https://code.jquery.com/jquery-4.0.0.min.js \
+  -o js/jquery.min.js
