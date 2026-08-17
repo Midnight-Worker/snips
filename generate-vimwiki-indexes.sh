@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+#pacman -S diffutils
+
 set -Eeuo pipefail
 
 # Rekursive Inhaltsverzeichnisse für ein Vimwiki mit Markdown-Dateien.
