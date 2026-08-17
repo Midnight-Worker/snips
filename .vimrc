@@ -16,6 +16,11 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
 
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+
 call plug#end()
 
 nmap <C-n> :NERDTreeToggle<CR> 
@@ -47,7 +52,7 @@ nnoremap <silent> <M-p> :MarkdownPreviewStop<CR>
 let mapleader = " "
 
 let g:vimwiki_list = [{
-	\ 'path': '~/.vimwiki',
+	\ 'path': '/c/Users/maikt/Desktop/Midnight-Walker/vimwiki',
 	\ 'syntax': 'markdown',
 	\ 'ext': '.md'
 	\ }]
@@ -67,5 +72,38 @@ nnoremap <C-l> <C-w>l
 ":belowright 12new | terminal ++curwin
 autocmd VimEnter * NERDTreeToggle | wincmd p
 nnoremap <leader>t :belowright 12new \| terminal ++curwin<CR>
-imap <S-Tab> <Plug>(emmet-expand-abbr)
 inoremap <leader>pic <img src="https://picsum.photos/id/" alt=""><Left><Left><Left><Left><Left><Left><Left><Left><Left>
+
+if executable('clangd')
+    augroup lsp_clangd
+        autocmd!
+        autocmd User lsp_setup call lsp#register_server({
+            \ 'name': 'clangd',
+            \ 'cmd': {server_info->['clangd']},
+            \ 'allowlist': ['c', 'cpp'],
+            \ })
+    augroup END
+endif
+
+let g:asyncomplete_auto_popup = 1
+
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+nnoremap gd :LspDefinition<CR>
+nnoremap K :LspHover<CR>
+imap <S-Tab> <Plug>(emmet-expand-abbr)
+" Speichern / Beenden
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
+
+" Suchmarkierung entfernen
+nnoremap <leader>n :nohlsearch<CR>
+" Fenster wechseln
+nnoremap <leader>h <C-w>h
+nnoremap <leader>j <C-w>j
+nnoremap <leader>k <C-w>k
+nnoremap <leader>l <C-w>l
+
+nnoremap <leader>s :split<CR>
+nnoremap <leader>v :vsplit<CR>
