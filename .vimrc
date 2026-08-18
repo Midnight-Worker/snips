@@ -70,8 +70,9 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 ":belowright 12new | terminal ++curwin
-autocmd VimEnter * NERDTreeToggle | wincmd p
-nnoremap <leader>t :belowright 12new \| terminal ++curwin<CR>
+"autocmd VimEnter * NERDTreeToggle | wincmd p
+"nnoremap <leader>t :belowright 12new \| terminal ++curwin<CR>
+autocmd VimEnter * terminal ++curwin
 inoremap <leader>pic <img src="https://picsum.photos/id/" alt=""><Left><Left><Left><Left><Left><Left><Left><Left><Left>
 
 if executable('clangd')
@@ -107,3 +108,5 @@ nnoremap <leader>l <C-w>l
 
 nnoremap <leader>s :split<CR>
 nnoremap <leader>v :vsplit<CR>
+tnoremap <leader>t <C-w>N
+tnoremap <C-n> <C-w>N<C-n>
